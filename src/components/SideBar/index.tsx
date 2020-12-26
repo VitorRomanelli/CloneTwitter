@@ -1,4 +1,5 @@
 import React from 'react';
+import StickyBox from 'react-sticky-box';
 
 import {
   Container,
@@ -19,21 +20,46 @@ const SideBar: React.FC = () => {
         <SearchInput placeholder="Buscar no Twitter" />
         <SearchIcon />
       </SearchWrapper>
-
-      <Body>
-        <List
-          title="Talvez você curta"
-          elements={[
-            <FollowSuggestion name="Vitor Romanelli" nickname="@Vitor" />,
-            <FollowSuggestion name="Programador" nickname="@prog" />,
-            <FollowSuggestion name="GitHub" nickname="@github" />,
-          ]}
-        />
-        <List
-          title="Talvez você curta"
-          elements={[<News />, <News />, <News />]}
-        />
-      </Body>
+      <StickyBox>
+        <Body>
+          <List
+            title="Talvez você curta"
+            elements={[
+              <FollowSuggestion name="Vitor Romanelli" nickname="@Vitor" />,
+              <FollowSuggestion name="Programador" nickname="@prog" />,
+              <FollowSuggestion name="GitHub" nickname="@github" />,
+            ]}
+          />
+          <List
+            title="Talvez você curta"
+            elements={[<News />, <News />, <News />]}
+          />
+          <List
+            title="Talvez você curta"
+            elements={[
+              <FollowSuggestion name="Vitor Romanelli" nickname="@Vitor" />,
+              <FollowSuggestion name="Programador" nickname="@prog" />,
+              <FollowSuggestion name="GitHub" nickname="@github" />,
+            ]}
+          />
+          <List
+            title="Talvez você curta"
+            elements={[<News />, <News />, <News />]}
+          />
+          <List
+            title="Talvez você curta"
+            elements={[
+              <FollowSuggestion name="Vitor Romanelli" nickname="@Vitor" />,
+              <FollowSuggestion name="Programador" nickname="@prog" />,
+              <FollowSuggestion name="GitHub" nickname="@github" />,
+            ]}
+          />
+          <List
+            title="Talvez você curta"
+            elements={[<News />, <News />, <News />]}
+          />
+        </Body>
+      </StickyBox>
     </Container>
   );
 };
