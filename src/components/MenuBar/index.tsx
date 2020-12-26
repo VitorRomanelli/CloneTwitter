@@ -12,6 +12,16 @@ import {
   EmailIcon,
   FavoriteIcon,
   ProfileIcon,
+  TextIcon,
+  BotSide,
+  Avatar,
+  Profile,
+  ProfileData,
+  ExitIcon,
+  HashTagIcon,
+  ItemIcon,
+  ListIcon,
+  MoreIcon
 } from './styles';
 
 const MenuBar: React.FC = () => {
@@ -20,9 +30,14 @@ const MenuBar: React.FC = () => {
       <TopSide>
         <Logo />
 
-        <MenuButton>
+        <MenuButton className="active">
           <HomeIcon />
           <span>Pagina Inicial</span>
+        </MenuButton>
+
+        <MenuButton>
+          <HashTagIcon />
+          <span>Explorar</span>
         </MenuButton>
 
         <MenuButton>
@@ -36,19 +51,41 @@ const MenuBar: React.FC = () => {
         </MenuButton>
 
         <MenuButton>
-          <FavoriteIcon />
-          <span>Favoritados</span>
+          <ItemIcon />
+          <span>Itens Salvos</span>
         </MenuButton>
 
-        <MenuButton className="active">
+        <MenuButton>
+          <ListIcon />
+          <span>Listas</span>
+        </MenuButton>
+
+        <MenuButton>
           <ProfileIcon />
           <span>Perfil</span>
         </MenuButton>
 
+        <MenuButton>
+          <MoreIcon />
+          <span>Mais</span>
+        </MenuButton>
+
         <Button>
+          <TextIcon />
           <span>Tweetar</span>
         </Button>
       </TopSide>
+
+      <BotSide>
+        <Profile>
+          <Avatar />
+          <ProfileData>
+            <strong> Vitor </strong>
+            <span> @VitorHVR </span>
+          </ProfileData>
+          <ExitIcon />
+        </Profile>
+      </BotSide>
     </Container>
   );
 };

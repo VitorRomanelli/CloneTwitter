@@ -41,7 +41,3 @@ export const Tweets = styled.div`
 
   flex-shrink: 0;
 `;
-
-export const Tweet = styled.div`
-
-`;
